@@ -35,18 +35,18 @@ void change_sw(VDataFlow2 *dut, vluint64_t sim_time)
             break;
         case 8:
             dut->btnl = 1;
-            dut->sw = 234;
+            dut->sw = 59339;
             break;
         case 10:
             dut->btnl = 0;
-            dut->sw = 1230;
+            dut->sw = 26377;
             break;
         case 12:
-            dut->sw = 12522;
+            dut->sw = 14756;
             break;
         case 14:
             dut->btnl = 1;
-            dut->sw = 12522;
+            dut->sw = 14756;
             break;
         case 16:
             dut->sw = 61902;
@@ -69,16 +69,16 @@ void check_sw(VDataFlow2 *dut, vluint64_t sim_time)
                 printError(sim_time, 0, dut->led);
             break;
         case 5:
-            if (dut->led != 8)
-                printError(sim_time, 8, dut->led);
+            if (dut->led != 1)
+                printError(sim_time, 1, dut->led);
             break;
         case 7:
             if (dut->led != dut->sw)
                 printError(sim_time, dut->sw, dut->led);
             break;
         case 9:
-            if (dut->led != 1872)
-                printError(sim_time, 1872, dut->led);
+            if (dut->led != 44)
+                printError(sim_time, 44, dut->led);
             break;
         case 11:
             if (dut->led != dut->sw)
@@ -89,12 +89,12 @@ void check_sw(VDataFlow2 *dut, vluint64_t sim_time)
                 printError(sim_time, dut->sw, dut->led);
             break;
         case 15:
-            if (dut->led != 34640)
-                printError(sim_time, 34640, dut->led);
+            if (dut->led != 157)
+                printError(sim_time, 157, dut->led);
             break;
         case 17:
-            if (dut->led != 36464)
-                printError(sim_time, 36464, dut->led);
+            if (dut->led != 63)
+                printError(sim_time, 63, dut->led);
             break;
         default:
             if (dut->led != 0)
@@ -110,7 +110,7 @@ int main(int argc, char **argv, char **env)
     Verilated::traceEverOn(true);
     VerilatedVcdC *m_trace = new VerilatedVcdC;
     dut->trace(m_trace, 5);
-    m_trace->open("waveform.vcd");
+    m_trace->open("waveform2.vcd");
 
     while (sim_time < MAX_SIM_TIME)
     {
