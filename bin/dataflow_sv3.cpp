@@ -24,25 +24,25 @@ void change_sw(Vdataflow_sv3 *dut, vluint64_t sim_time)
         switch (sim_time)
         {
         case 2:
-            dut->btnd = 0;
+            dut->btnr = 0;
             dut->sw = 0 break;
         case 4:
             dut->sw = 1;
             break;
         case 6:
-            dut->btnd = 0;
+            dut->btnr = 0;
             dut->sw = 11;
             break;
         case 8:
-            dut->btnd = 0;
+            dut->btnr = 0;
             dut->sw = 234;
             break;
         case 10:
-            dut->btnd = 0;
-            dut->sw = 1230;
+            dut->btnr = 0;
+            dut->sw = 0;
             break;
         case 12:
-            dut->btnd = 1;
+            dut->btnr = 1;
             dut->sw = 0;
             break;
         case 14:
@@ -67,7 +67,7 @@ void change_sw(Vdataflow_sv3 *dut, vluint64_t sim_time)
             dut->sw = 7;
             break;
         default:
-            dut->btnd = 0;
+            dut->btnr = 0;
             dut->sw = 0;
         }
     }
@@ -105,34 +105,34 @@ void check_sw(Vdataflow_sv3 *dut, vluint64_t sim_time)
             break;
         case 15:
             if (dut->led != 1)
-                printError(sim_time, 34640, dut->led);
+                printError(sim_time, 1, dut->led);
             break;
         case 17:
             if (dut->led != 0)
-                printError(sim_time, 36464, dut->led);
+                printError(sim_time, 0, dut->led);
             break;
         case 19:
             if (dut->led != 0)
-                printError(sim_time, 36464, dut->led);
+                printError(sim_time, 0, dut->led);
             break;
         case 21:
             if (dut->led != 1)
-                printError(sim_time, 36464, dut->led);
+                printError(sim_time, 1, dut->led);
             break;
         case 23:
             if (dut->led != 1)
-                printError(sim_time, 36464, dut->led);
+                printError(sim_time, 1, dut->led);
             break;
         case 25:
             if (dut->led != 1)
-                printError(sim_time, 36464, dut->led);
+                printError(sim_time, 1, dut->led);
             break;
         case 27:
             if (dut->led != 1)
-                printError(sim_time, 36464, dut->led);
+                printError(sim_time, 1, dut->led);
             break;
         default:
-            if (dut->led !=)
+            if (dut->led != 0)
                 std::cout << "Error at " << sim_time << "ns" << std::endl;
         }
     }
@@ -145,7 +145,7 @@ int main(int argc, char **argv, char **env)
     Verilated::traceEverOn(true);
     VerilatedVcdC *m_trace = new VerilatedVcdC;
     dut->trace(m_trace, 5);
-    m_trace->open("waveform.vcd");
+    m_trace->open("waveform3.vcd");
 
     while (sim_time < MAX_SIM_TIME)
     {
