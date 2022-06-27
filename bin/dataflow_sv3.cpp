@@ -25,7 +25,8 @@ void change_sw(Vdataflow_sv3 *dut, vluint64_t sim_time)
         {
         case 2:
             dut->btnr = 0;
-            dut->sw = 0 break;
+            dut->sw = 0;
+            break;
         case 4:
             dut->sw = 1;
             break;
