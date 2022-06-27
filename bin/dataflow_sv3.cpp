@@ -94,7 +94,7 @@ void check_sw(Vdataflow_sv3 *dut, vluint64_t sim_time)
             break;
         case 9:
             if (dut->led != dut->sw)
-                printError(sim_time, 1872, dut->led);
+                printError(sim_time, dt->sw, dut->led);
             break;
         case 11:
             if (dut->led != dut->sw)
