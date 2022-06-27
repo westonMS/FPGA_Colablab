@@ -140,7 +140,7 @@ void check_sw(Vdataflow_sv3 *dut, vluint64_t sim_time)
 
 int main(int argc, char **argv, char **env)
 {
-    Vdataflow_sv *dut = new Vdataflow_sv;
+    Vdataflow_sv3 *dut = new Vdataflow_sv3;
 
     Verilated::traceEverOn(true);
     VerilatedVcdC *m_trace = new VerilatedVcdC;
