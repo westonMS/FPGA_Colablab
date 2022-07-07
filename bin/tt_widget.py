@@ -116,25 +116,33 @@ grid1_7[0,2]=create_expanded_button('F=~(A^B)','info')
 
 
 # LOOK INTO HAVING THE CHECK ANSWER BUTTON DO DIFFERENT THINGS
+#DON'T LIKE THIS IMPLEMENTATION. Find a way to only need one 'on_button_clicked' function
 
 # Process when clicking the "Check" button
+# AND
 def on_button_clicked(self):
   CheckAnswer1_1(grid1_1, 0, 0, 0, 1)
 
-def on_button_clicked2(self):         #DON'T LIKE THIS IMPLEMENTATION. Find a way to only need one 'on_button_clicked' function
+# OR
+def on_button_clicked2(self):
   CheckAnswer1_1(grid1_2, 0, 1, 1, 1)
 
+# NOT
 def on_button_clicked3(self):
   CheckAnswer1_3(grid1_3, 1, 0)
 
+# NOR
 def on_button_clicked4(self):
   CheckAnswer1_1(grid1_4, 1, 0, 0, 0)
 
+# NAND
 def on_button_clicked5(self):
   CheckAnswer1_1(grid1_5, 1, 1, 1, 0)
 
+# XOR
 def on_button_clicked6(self):
   CheckAnswer1_1(grid1_6, 0, 1, 1, 0)
 
+# XNOR
 def on_button_clicked7(self):
   CheckAnswer1_1(grid1_7, 1, 0, 0, 1)
