@@ -56,7 +56,5 @@ def generate_tt(key):
     header_button = tt.create_expanded_button('Figure 1.6: XNOR Truth Table', 'info', '466px')
     # Display the widgets
     tt.widgets.VBox([tt.widgets.HTML(value="<span id='1.1'></span>"), tt.AppLayout(header=header_button,footer=None),tt.grid1_7])
-
-  elif key == 7:
     
   
