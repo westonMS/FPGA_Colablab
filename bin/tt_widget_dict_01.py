@@ -1,13 +1,15 @@
 import tt_widget as tt
 
+# CURRENTLY NOT PRINTING ACTUAL GRID TO COLAB OUTPUT SCREEN
+
 def generate_tt(key):
   if key == 0:
     # Events when clicked    
-    tt.grid1_1[0,3].on_click(tt.on_button_clicked)
+    grid1_1[0,3].on_click(on_button_clicked)
     # Create the head tab
-    header_button = tt.create_expanded_button('Figure 1.1: AND Truth Table', 'info', '466px')
+    header_button = create_expanded_button('Figure 1.1: AND Truth Table', 'info', '466px')
     # Display the widgets
-    tt.widgets.VBox([tt.widgets.HTML(value="<span id='1.1'></span>"), tt.AppLayout(header=header_button,footer=None),tt.grid1_1])
+    widgets.VBox([widgets.HTML(value="<span id='1.1'></span>"), AppLayout(header=header_button,footer=None),grid1_1])
 
   elif key == 1:
     # Events when clicked    
