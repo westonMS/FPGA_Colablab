@@ -56,6 +56,10 @@ def CheckAnswer(grid, num_inputs, input):
             grid[i + 1, num_inputs + 1].description = "Wrong! Submit again"
 
 
+# populates default input values
+def populate():
+    pass
+
 # AND gate truth table creation
 grid1_1 = create_grid(2, 'AB00011011', 'F=AB')
 
@@ -75,9 +79,12 @@ grid1_5 = create_grid(2, 'AB00011011', 'F=NAND')
 grid1_6 = create_grid(2, 'AB00011011', 'F=A^B')
 
 # XNOR gat truth table creatione
-grid1_7 = create_grid(2, 'AB00011011', 'F=~(A^B')
+grid1_7 = create_grid(2, 'AB00011011', 'F=~(A^B)')
 
-# THIS CAN PROBABLY BE PLACED IN THE CREATE FUNCTION WITH F AS AN ARGUMENT ABCF000001010011100101110111
+# Harder question
+grid1_8 = create_grid(3,'ABC000001010011100101110111', 'F=!(AC)|(BA)')
+
+# THIS CAN PROBABLY BE PLACED IN THE CREATE FUNCTION WITH F AS AN ARGUMENT ABCF 000 001 010 011 100 101 110 111
 
 
 # LOOK INTO HAVING THE CHECK ANSWER BUTTON DO DIFFERENT THINGS
@@ -93,27 +100,25 @@ def on_button_clicked(self):
 def on_button_clicked2(self):
     CheckAnswer(grid1_2, 2, '0111')
 
-
 # NOT
 def on_button_clicked3(self):
     CheckAnswer(grid1_3, 1, '10')
-
 
 # NOR
 def on_button_clicked4(self):
     CheckAnswer(grid1_4, 2, '1000')
 
-
 # NAND
 def on_button_clicked5(self):
     CheckAnswer(grid1_5, 2, '1110')
-
 
 # XOR
 def on_button_clicked6(self):
     CheckAnswer(grid1_6, 2, '0110')
 
-
 # XNOR
 def on_button_clicked7(self):
     CheckAnswer(grid1_7, 2, '1001')
+
+def on_button_clicked8(self):
+    CheckAnswer(grid1_8, 3, '11111011')
