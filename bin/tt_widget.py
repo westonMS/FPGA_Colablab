@@ -46,9 +46,11 @@ def create_gridTEST(num_input, input_string, func):
     grid = GridspecLayout(num_row, num_col, width=str(num_col * 120) + "px")
 
     # creates the default values for the different input combos of the truth table
-    for i in range(1, num_row + 1):
+    for i in range(0, num_row):
         for j in range(0, num_input):
-            grid[i, j] = create_expanded_button(str(input_string[j]), "info")
+            val = str(input_string[0])
+            grid[i, j] = create_expanded_button(val, "info")
+            input_string = input_string[1:]
 
     # creates the click to check button as well as the userinput section of the table
     for i in range(1, num_row):
@@ -160,8 +162,8 @@ grid1_7 = create_grid("A", "B", "F", 0, 0, 0, 1, 1, 0, 1, 1)
 grid1_7[0, 2] = create_expanded_button("F=~(A^B)", "info")
 
 
-gridTEST = create_gridTEST(2, "AB00011011", "F=TEST")
-# THIS CAN PROBABLY BE PLACED IN THE CREATE FUNCTION WITH F AS AN ARGUMENT
+gridTEST = create_gridTEST(2, "ABF00011011", "F=TEST")
+# THIS CAN PROBABLY BE PLACED IN THE CREATE FUNCTION WITH F AS AN ARGUMENT ABCF000001010011100101110111
 
 
 # LOOK INTO HAVING THE CHECK ANSWER BUTTON DO DIFFERENT THINGS
@@ -201,3 +203,18 @@ def on_button_clicked6(self):
 # XNOR
 def on_button_clicked7(self):
     CheckAnswer1_1(grid1_7, 1, 0, 0, 1)
+
+
+def CheckAnswerTEST(grid, num_inputs, input):
+    for i in len(input):
+        if grid[i + 1, num_inputs].value == input[i]:
+            grid[i + 1, num_inputs + 1].button_style = "Success"
+            grid[i + 1, num_inputs + 1].description = "Correct!"
+        else:
+            grid[i + 1, num_inputs + 1].button_style = "Danger"
+            grid[i + 1, num_inputs + 1].description = "Wrong! Submit again"
+
+
+# TEST
+def on_button_clicked8(self):
+    CheckAnswerTEST(gridTEST, 2, "1111")
