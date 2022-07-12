@@ -48,7 +48,7 @@ def create_grid(num_input, input_string, func):
 # checks if the user input is correct
 def CheckAnswer(grid, num_inputs, input):
     for i in len(input):
-        if grid[i + 1, num_inputs].value == input[i]:
+        if grid[i + 1, num_inputs].value == int(input[i]):
             grid[i + 1, num_inputs + 1].button_style = "Success"
             grid[i + 1, num_inputs + 1].description = "Correct!"
         else:
