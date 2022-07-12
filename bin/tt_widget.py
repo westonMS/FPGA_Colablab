@@ -19,7 +19,7 @@ def create_grid(num_input, input_string, func):
     """
     num_row = (2**num_input) + 1
     num_col = num_input + 2
-    grid = GridspecLayout(num_row, num_col, width=str(num_col * 120) + "px")
+    grid = GridspecLayout(num_row, num_col, width=str(num_col * 117.5) + "px")
 
     # creates the default values for the different input combos of the truth table
     for i in range(0, num_row):
@@ -117,4 +117,3 @@ def on_button_clicked6(self):
 # XNOR
 def on_button_clicked7(self):
     CheckAnswer(grid1_7, 2, '1001')
-
