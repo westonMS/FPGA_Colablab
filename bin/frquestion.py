@@ -1,3 +1,7 @@
+import ipywidgets as widgets
+from ipywidgets import GridspecLayout
+from ipywidgets import AppLayout, Button, Layout, jslink, IntText, IntSlider
+
 #Free Response QUESTIONs
 frquestions = [
 ["What is the value of 4'b1011&4'b1001?", 1001],
