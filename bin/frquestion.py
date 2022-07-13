@@ -7,7 +7,13 @@ frquestions = [
 ["What is the value of 4'b1011&4'b1001?", 1001],
 ["What is the output of 4’b1001|4’b1011?", 1011],
 ["What is the output of 4’b1001^4b’1011?", 10],
-["What is the output of 4’b1001&&4’b1011?", 1]
+["What is the output of 4’b1001&&4’b1011?", 1],
+["What is the output of 4’b1001||4’b1011?", 1],
+["What is the output of 4’b1001^^4’b1011?", 0],
+["What is &4’b1011?", 0],
+["What is |4’b1011?", 1],
+["What is ^4’b1011?", 1],
+["What is !4b’1011?", 0]
 ]
 def create_expanded_button(description, button_style, width='auto'):
     return Button(description=description, button_style=button_style, layout=Layout(height='auto', width=width))
