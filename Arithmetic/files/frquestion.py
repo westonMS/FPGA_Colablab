@@ -4,10 +4,10 @@ from ipywidgets import AppLayout, Button, Layout, jslink, IntText, IntSlider
 
 #Free Response QUESTIONs
 frquestions = [
-["What is the value of 4'b1011&4'b1001?", 1001],
-["What is the output of 4’b1001|4’b1011?", 1011],
-["What is the output of 4’b1001^4b’1011?", 10],
-["What is the output of 4’b1001&&4’b1011?", 1],
+["What integer does this sign-magnitude number represent? `10101`", -5],
+["What integer does this sign-magnitude number represent? `01110`?", 14],
+["What intgeer does this two's complement number represent? `10101`", -11],
+["What intgeer does this two's complement number represent? `01110`", 14],
 ["What is the output of 4’b1001||4’b1011?", 1],
 ["What is the output of 4’b1001^^4’b1011?", 0],
 ["What is &4’b1011?", 0],
