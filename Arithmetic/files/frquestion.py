@@ -18,10 +18,10 @@ frquestions = [
 def create_expanded_button(description, button_style, width='auto'):
     return Button(description=description, button_style=button_style, layout=Layout(height='auto', width=width))
 
-def create_frq(list, index):
+def create_frq(list, index, q_width):
   qlist = list[index]
   grid = GridspecLayout(1,3, width = '550px')
-  grid[0,0] = create_expanded_button(qlist[0], "info", "300px")
+  grid[0,0] = create_expanded_button(qlist[0], "info", q_width)
   grid[0,1] =widgets.BoundedIntText(min=0,max=9999,layout=Layout(width='100px'))
   grid[0,2] =  create_expanded_button("Check", "info")
   return grid
