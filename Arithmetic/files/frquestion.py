@@ -20,13 +20,13 @@ def create_expanded_button(description, button_style, width='auto'):
 
 def create_frq(list, index, q_width):
   qlist = list[index]
-  grid = GridspecLayout(1,3, width = '550px')
-  grid[0,0] = create_expanded_button(qlist[0], "info", q_width)
+  grid = GridspecLayout(1,3, width = str(300+q_width)+'px')
+  grid[0,0] = create_expanded_button(qlist[0], "info", str(q_width)+'px')
   grid[0,1] =widgets.BoundedIntText(min=0,max=9999,layout=Layout(width='100px'))
   grid[0,2] =  create_expanded_button("Check", "info")
   return grid
 #Question 1  
-frq_1 = create_frq(frquestions, 0, '450px')
+frq_1 = create_frq(frquestions, 0, 450)
 def frq_1_check(grid, qlist):
   if grid[0,1].value == qlist[0][1]:
     grid[0,2].button_style = "success"
@@ -35,7 +35,7 @@ def frq_1_check(grid, qlist):
 def check_frq_1(self):
   frq_1_check(frq_1, frquestions)
 #Question 2
-frq_2 = create_frq(frquestions, 1, '450px')
+frq_2 = create_frq(frquestions, 1, 450)
 def frq_2_check(grid, qlist):
   if grid[0,1].value == qlist[1][1]:
     grid[0,2].button_style = "success"
