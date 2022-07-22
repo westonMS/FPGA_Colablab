@@ -30,7 +30,7 @@ def create_expanded_button(description, button_style, width='auto'):
 
 def create_frq(list, index, q_width=300, max_=9999):
   qlist = list[index]
-  grid = GridspecLayout(1,3, width = (str(300 + q_width) +'px'))
+  grid = GridspecLayout(1,3, width = (str(250 + q_width) +'px'))
   grid[0,0] = create_expanded_button(qlist[0], "info", str(q_width)+'px')
   grid[0,1] =widgets.BoundedIntText(min=(-1*max_),max=max_,layout=Layout(width='100px'))
   grid[0,2] =  create_expanded_button("Check", "info")
