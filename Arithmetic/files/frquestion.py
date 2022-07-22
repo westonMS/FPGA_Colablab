@@ -36,7 +36,7 @@ def create_frq(list, index, q_width=300, max_=9999):
   grid[0,2] =  create_expanded_button("Check", "info")
   return grid
 #Question 1  
-frq_1 = create_frq(frquestions, 0, 600)
+frq_1 = create_frq(frquestions, 0, 550)
 def frq_1_check(grid, qlist):
   if grid[0,1].value == qlist[0][1]:
     grid[0,2].button_style = "success"
@@ -45,7 +45,7 @@ def frq_1_check(grid, qlist):
 def check_frq_1(self):
   frq_1_check(frq_1, frquestions)
 #Question 2
-frq_2 = create_frq(frquestions, 1, 600)
+frq_2 = create_frq(frquestions, 1, 550)
 def frq_2_check(grid, qlist):
   if grid[0,1].value == qlist[1][1]:
     grid[0,2].button_style = "success"
@@ -54,7 +54,7 @@ def frq_2_check(grid, qlist):
 def check_frq_2(self):
   frq_2_check(frq_2, frquestions)
 #Question 3
-frq_3 = create_frq(frquestions, 2, 600)
+frq_3 = create_frq(frquestions, 2, 550)
 def frq_3_check(grid, qlist):
   if grid[0,1].value == qlist[2][1]:
     grid[0,2].button_style = "success"
