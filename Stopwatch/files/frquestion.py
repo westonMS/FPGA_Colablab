@@ -4,9 +4,9 @@ from ipywidgets import AppLayout, Button, Layout, jslink, IntText, IntSlider
 
 #Free Response QUESTIONs
 frquestions = [
-["Time in seconds:", .00000001],
-["Time in seconds:", .01],
-["Number of clock cycles:", 1000000],
+["Time in nanoseconds:", 10],
+["Time in miliseconds:", 10],
+["Millions of clock cycles:", 1],
 ["Number of bits:", 20]
 ]
 def create_expanded_button(description, button_style, width='auto'):
