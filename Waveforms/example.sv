@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module example(
-    input logic inc,
     input logic clk,
+    input logic inc,
     input logic reset,
     output logic[15:0] count
 );
