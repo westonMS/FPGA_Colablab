@@ -1,9 +1,8 @@
 module function1 (
- 			 output logic q,
- 			 input logic  clk, load, d 
- 			 );
+ output logic [15:0] led,
+ input logic  btnd,
+ input logic [15:0] sw
+);
     
-    always_ff @ (posedge clk)
-      if (load)
-        q<= d;
+    assign led = btnd ? sw << 3 : sw;
  endmodule // behavLoadableReg
