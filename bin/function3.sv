@@ -4,9 +4,6 @@ module top(
    output logic[15:0] led
 );
 
-
-assign led[15:3] = btnr ? 13'd0 : sw;
-assign led[2:1] = btnr? 2'b00 : {C,B};
-assign led[0] = btnr ? (A&~B)|(C) : A;
+//Code Goes Here
 
 endmodule
