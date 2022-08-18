@@ -1,10 +1,10 @@
 module add_8(
-  input logic Cin,
+  input logic cin,
   input logic [7:0] a, b,
   output logic [7:0] s,
-  output logic Cout 
+  output logic co 
   );
   //Instantiate 8 instances of full_adder
-  //Have Cin be the first carry in and Cout be the last carry out
+  //Have cin be the first carry in and co be the last carry out
   
  endmodule
