@@ -67,3 +67,13 @@ def frq_5_check(grid, qlist):
     grid[0,2].button_style = "danger"
 def check_frq_5(self):
   frq_5_check(frq_5, frquestions)
+
+#Question 5
+frq_6 = create_frq(frquestions,5)
+def frq_6_check(grid, qlist):
+  if grid[0,1].value == qlist[4][1]:
+    grid[0,2].button_style = "success"
+  else:
+    grid[0,2].button_style = "danger"
+def check_frq_6(self):
+  frq_6_check(frq_6, frquestions)
