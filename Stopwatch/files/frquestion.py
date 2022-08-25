@@ -8,7 +8,9 @@ frquestions = [
 ["In MHZ:", 40],
 ["In ns:", .1],
 ["In ms:", 40],
-["Number of clock cycles:", 1000000]
+["In ns", 10],
+["Number of clock cycles:", 1000000],
+    
 ]
 def create_expanded_button(description, button_style, width='auto'):
     return Button(description=description, button_style=button_style, layout=Layout(height='auto', width=width))
