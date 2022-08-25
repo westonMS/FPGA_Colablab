@@ -4,10 +4,11 @@ from ipywidgets import AppLayout, Button, Layout, jslink, IntText, IntSlider
 
 #Free Response QUESTIONs
 frquestions = [
-["Time in nanoseconds:", 10],
-["Time in miliseconds:", 10],
-["Millions of clock cycles:", 1],
-["Number of bits:", 20]
+["In KHZ:", 200],
+["In MHZ:", 40],
+["In ns:", .1],
+["In ms:", 40],
+["Number of clock cycles:", 1000000]
 ]
 def create_expanded_button(description, button_style, width='auto'):
     return Button(description=description, button_style=button_style, layout=Layout(height='auto', width=width))
@@ -54,4 +55,13 @@ def frq_3_check(grid, qlist):
   else:
     grid[0,2].button_style = "danger"
 def check_frq_4(self):
-  frq_3_check(frq_4, frquestions)
+  frq_4_check(frq_4, frquestions)
+#Question 5
+frq_5 = create_frq(frquestions,4)
+def frq_3_check(grid, qlist):
+  if grid[0,1].value == qlist[4][1]:
+    grid[0,2].button_style = "success"
+  else:
+    grid[0,2].button_style = "danger"
+def check_frq_4(self):
+  frq_5_check(frq_5, frquestions)
