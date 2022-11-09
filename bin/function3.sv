@@ -1,4 +1,4 @@
-module top(
+module function3(
    input logic[12:0] sw,
    input logic btnr, A, B, C,
    output logic[15:0] led

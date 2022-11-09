@@ -1,4 +1,4 @@
-module top(
+module function4(
    input logic btnu, student, prof, pm,
    input logic[3:0] hour,
    input logic[8:0] sw,
