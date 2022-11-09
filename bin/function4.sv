@@ -5,6 +5,18 @@ module top(
    output logic[15:0] led
 );
 
-//Code Goes Here
+always_comb begin
+   if(btnu) begin
+      if(prof)
+         led = 16'hFFFF;
+      else 
+         led = 16'h0000;
+   end
+   else begin
+       led[15:7] = sw;
+       led[6:3] = hour;
+       led[2:0] = {pm, prof, student};
+   end
+end
 
 endmodule

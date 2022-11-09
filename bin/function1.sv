@@ -4,5 +4,6 @@ module function1 (
  input logic [15:0] sw
 );
     
-//Code Goes Here
+// Code goes here
+
 endmodule // behavLoadableReg
