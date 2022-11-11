@@ -108,7 +108,7 @@ def frq_8_check(grid, qlist):
 def check_frq_8(self):
   frq_8_check(frq_8, frquestions)
 #Question 9
-frq_9 = create_frq(frquestions, 8, 450, max=11111111)
+frq_9 = create_frq(frquestions, 8, 450, 11111111)
 def frq_9_check(grid, qlist):
   if grid[0,1].value == qlist[3][1]:
     grid[0,2].button_style = "success"
@@ -135,7 +135,7 @@ def frq_11_check(grid, qlist):
 def check_frq_11(self):
   frq_11_check(frq_11, frquestions)
 #Question 12
-frq_12 = create_frq(frquestions, 11, 450, max=11111111)
+frq_12 = create_frq(frquestions, 11, 450, 11111111)
 def frq_12_check(grid, qlist):
   if grid[0,1].value == qlist[3][1]:
     grid[0,2].button_style = "success"
@@ -171,7 +171,7 @@ def frq_15_check(grid, qlist):
 def check_frq_15(self):
   frq_15_check(frq_15, frquestions)
 #Question 16
-frq_16 = create_frq(frquestions, 15, 450, max=11111111)
+frq_16 = create_frq(frquestions, 15, 450, 11111111)
 def frq_16_check(grid, qlist):
   if grid[0,1].value == qlist[3][1]:
     grid[0,2].button_style = "success"
