@@ -74,7 +74,7 @@ def check_frq_4(self):
 #Question 5
 frq_5 = create_frq(frquestions, 4, 450)
 def frq_5_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[4][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -83,7 +83,7 @@ def check_frq_5(self):
 #Question 6
 frq_6 = create_frq(frquestions, 5, 450)
 def frq_6_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[5][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -92,7 +92,7 @@ def check_frq_6(self):
 #Question 7
 frq_7 = create_frq(frquestions, 6, 450)
 def frq_7_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[6][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -101,7 +101,7 @@ def check_frq_7(self):
 #Question 8
 frq_8 = create_frq(frquestions, 7, 450)
 def frq_8_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[7][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -110,7 +110,7 @@ def check_frq_8(self):
 #Question 9
 frq_9 = create_frq(frquestions, 8, 450, 11111111)
 def frq_9_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[8][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -119,7 +119,7 @@ def check_frq_9(self):
 #Question 10
 frq_10 = create_frq(frquestions, 9, 450)
 def frq_10_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[9][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -128,7 +128,7 @@ def check_frq_10(self):
 #Question 11
 frq_11 = create_frq(frquestions, 10, 450)
 def frq_11_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[10][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -137,7 +137,7 @@ def check_frq_11(self):
 #Question 12
 frq_12 = create_frq(frquestions, 11, 450, 11111111)
 def frq_12_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[11][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -146,7 +146,7 @@ def check_frq_12(self):
 #Question 13
 frq_13 = create_frq(frquestions, 12, 450)
 def frq_13_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[12][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -155,7 +155,7 @@ def check_frq_13(self):
 #Question 14
 frq_14 = create_frq(frquestions, 13, 450)
 def frq_14_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[13][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -164,7 +164,7 @@ def check_frq_14(self):
 #Question 15
 frq_15 = create_frq(frquestions, 14, 450)
 def frq_15_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[14][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -173,7 +173,7 @@ def check_frq_15(self):
 #Question 16
 frq_16 = create_frq(frquestions, 15, 450, 11111111)
 def frq_16_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[15][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -182,7 +182,7 @@ def check_frq_16(self):
 #Question 17
 frq_17 = create_frq(frquestions, 16, 450)
 def frq_17_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[16][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -191,7 +191,7 @@ def check_frq_17(self):
 #Question 18
 frq_18 = create_frq(frquestions, 17, 450)
 def frq_18_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[17][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -200,7 +200,7 @@ def check_frq_18(self):
 #Question 19
 frq_19 = create_frq(frquestions, 18, 450)
 def frq_19_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[18][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
@@ -209,7 +209,7 @@ def check_frq_19(self):
 #Question 20
 frq_20 = create_frq(frquestions, 19, 450)
 def frq_20_check(grid, qlist):
-  if grid[0,1].value == qlist[3][1]:
+  if grid[0,1].value == qlist[19][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
