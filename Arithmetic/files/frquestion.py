@@ -74,7 +74,7 @@ def check_frq_4(self):
 #Question 5
 frq_5 = create_frq(frquestions, 4, 450)
 def frq_5_check(grid, qlist):
-  if grid[0,1].value == qlist[index][1]:
+  if grid[0,1].value == qlist[3][1]:
     grid[0,2].button_style = "success"
   else:
     grid[0,2].button_style = "danger"
