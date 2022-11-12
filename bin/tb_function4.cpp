@@ -122,7 +122,7 @@ void check_sw(Vfunction4 *dut, vluint64_t sim_time)
             break;
         case 11:
             if (dut->led != dut->sw)
-                printError(sim_time, dut->65535, dut->led);
+                printError(sim_time, 65535, dut->led);
             break;
         case 13:
             if (dut->led != dut->sw)
