@@ -24,35 +24,75 @@ void change_sw(Vfunction4 *dut, vluint64_t sim_time)
         switch (sim_time)
         {
         case 2:
-            dut->btnd = 1;
+            dut->btnu = 0;
+            dut->hour=0;
+            dut->student=0;
+            dut->prof=0;
+            dut->pm=0;
+            dut->sw = 511;
             break;
         case 4:
-            dut->sw = 1;
+            dut->btnu = 0;
+            dut->hour=11;
+            dut->student=0;
+            dut->prof=1;
+            dut->pm=0;
+            dut->sw = 511;
             break;
         case 6:
-            dut->btnd = 0;
-            dut->sw = 11;
+            dut->btnu = 1;
+            dut->hour=11;
+            dut->student=0;
+            dut->prof=1;
+            dut->pm=0;
+            dut->sw = 511;
             break;
         case 8:
-            dut->btnd = 1;
-            dut->sw = 234;
+             dut->btnu = 1;
+            dut->hour=2;
+            dut->student=0;
+            dut->prof=1;
+            dut->pm=0;
+            dut->sw = 511;
             break;
         case 10:
-            dut->btnd = 0;
-            dut->sw = 1230;
+            dut->btnu = 1;
+            dut->hour=2;
+            dut->student=0;
+            dut->prof=1;
+            dut->pm=1;
+            dut->sw = 511;
             break;
         case 12:
-            dut->sw = 12522;
+             dut->btnu = 1;
+            dut->hour=11;
+            dut->student=1;
+            dut->prof=0;
+            dut->pm=0;
+            dut->sw = 511;
             break;
         case 14:
-            dut->btnd = 1;
-            dut->sw = 12522;
+             dut->btnu = 1;
+            dut->hour=11;
+            dut->student=1;
+            dut->prof=0;
+            dut->pm=1;
+            dut->sw = 511;
             break;
         case 16:
-            dut->sw = 61902;
+            dut->btnu = 1;
+            dut->hour=2;
+            dut->student=1;
+            dut->prof=0;
+            dut->pm=0;
+            dut->sw = 511;           
             break;
         default:
-            dut->btnd = 0;
+            dut->btnu = 0;
+            dut->hour=0;
+            dut->student=0;
+            dut->prof=0;
+            dut->pm=0;
             dut->sw = 0;
         }
     }
@@ -66,35 +106,35 @@ void check_sw(Vfunction4 *dut, vluint64_t sim_time)
         {
         case 3:
             if (dut->led != 0)
-                printError(sim_time, 0, dut->led);
+                printError(sim_time, 65408, dut->led);
             break;
         case 5:
             if (dut->led != 8)
-                printError(sim_time, 8, dut->led);
+                printError(sim_time, 65498, dut->led);
             break;
         case 7:
             if (dut->led != dut->sw)
-                printError(sim_time, dut->sw, dut->led);
+                printError(sim_time, 65535, dut->led);
             break;
         case 9:
             if (dut->led != 1872)
-                printError(sim_time, 1872, dut->led);
+                printError(sim_time, 65535, dut->led);
             break;
         case 11:
             if (dut->led != dut->sw)
-                printError(sim_time, dut->sw, dut->led);
+                printError(sim_time, dut->65535, dut->led);
             break;
         case 13:
             if (dut->led != dut->sw)
-                printError(sim_time, dut->sw, dut->led);
+                printError(sim_time, 65535, dut->led);
             break;
         case 15:
             if (dut->led != 34640)
-                printError(sim_time, 34640, dut->led);
+                printError(sim_time, 0, dut->led);
             break;
         case 17:
             if (dut->led != 36464)
-                printError(sim_time, 36464, dut->led);
+                printError(sim_time, 0, dut->led);
             break;
         default:
             if (dut->led != 0)
