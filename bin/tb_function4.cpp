@@ -3,7 +3,7 @@
 #include <bitset>
 #include <verilated.h>
 #include <verilated_vcd_c.h>
-#include "Vdataflow_sv.h"
+#include "Vfunction4.h"
 
 #define MAX_SIM_TIME 20
 vluint64_t sim_time = 0;
@@ -17,7 +17,7 @@ void printError(int sim_time, int expected, int simulated)
     }
 }
 
-void change_sw(Vdataflow_sv *dut, vluint64_t sim_time)
+void change_sw(Vfunction4 *dut, vluint64_t sim_time)
 {
     if (sim_time % 2 == 0)
     {
@@ -58,7 +58,7 @@ void change_sw(Vdataflow_sv *dut, vluint64_t sim_time)
     }
 }
 
-void check_sw(Vdataflow_sv *dut, vluint64_t sim_time)
+void check_sw(Vfunction4 *dut, vluint64_t sim_time)
 {
     if (sim_time % 2 == 1)
     {
@@ -105,7 +105,7 @@ void check_sw(Vdataflow_sv *dut, vluint64_t sim_time)
 
 int main(int argc, char **argv, char **env)
 {
-    Vdataflow_sv *dut = new Vdataflow_sv;
+    Vfunction4 *dut = new Vfunction4;
 
     Verilated::traceEverOn(true);
     VerilatedVcdC *m_trace = new VerilatedVcdC;
