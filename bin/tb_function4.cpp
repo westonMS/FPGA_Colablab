@@ -105,35 +105,35 @@ void check_sw(Vfunction4 *dut, vluint64_t sim_time)
         switch (sim_time)
         {
         case 3:
-            if (dut->led != 0)
+            if (dut->led != 65408)
                 printError(sim_time, 65408, dut->led);
             break;
         case 5:
-            if (dut->led != 8)
+            if (dut->led != 65498)
                 printError(sim_time, 65498, dut->led);
             break;
         case 7:
-            if (dut->led != dut->sw)
+            if (dut->led != 65535)
                 printError(sim_time, 65535, dut->led);
             break;
         case 9:
-            if (dut->led != 1872)
+            if (dut->led != 65335)
                 printError(sim_time, 65535, dut->led);
             break;
         case 11:
-            if (dut->led != dut->sw)
+            if (dut->led != 65535)
                 printError(sim_time, 65535, dut->led);
             break;
         case 13:
-            if (dut->led != dut->sw)
+            if (dut->led != 65535)
                 printError(sim_time, 65535, dut->led);
             break;
         case 15:
-            if (dut->led != 34640)
+            if (dut->led != 0)
                 printError(sim_time, 0, dut->led);
             break;
         case 17:
-            if (dut->led != 36464)
+            if (dut->led != 0)
                 printError(sim_time, 0, dut->led);
             break;
         default:
